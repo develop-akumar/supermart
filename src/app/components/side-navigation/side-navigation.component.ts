@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
-import { Category } from '../types/category';
-import { CategoryService } from '../../services/category.service';
+import { Category } from '../../types/category';
+import { CategoryService } from '../../services/category/category.service';
 
 @Component({
   selector: 'app-side-navigation',
