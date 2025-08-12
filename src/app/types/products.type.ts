@@ -1,7 +1,6 @@
 export interface ProductListItem {
-    id:number,
-    product_name :string,
-    product_image:string,
-    price:number
+  id: number;
+  product_name: string;
+  product_image: string;
+  price: number;
 }
-
