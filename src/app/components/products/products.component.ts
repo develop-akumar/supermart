@@ -15,12 +15,15 @@ import { fetchProductsAction } from '../../store/Actions/products.action';
     // ],
 })
 export class ProductsComponent {
-  products?: Observable<ProductListItem>;
-  constructor(private productsService: ProductsService, 
+  products?: Observable<ProductListItem[]>;
+
+  constructor(
+    // private productsService: ProductsService, 
     private store: Store<{products:ProductListItem[]}>) {
     this.store.dispatch(fetchProductsAction.hit());
 
-    this.productsService.getProductsList().subscribe((res)=>
-    console.log('res = ', res))
+  //   this.productsService.getProductsList().subscribe((res)=>
+  //   console.log('res = ', res))
+  
   }
 }

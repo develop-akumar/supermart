@@ -11,7 +11,8 @@ export class ProductsService {
   }
 
   getProductsList(): Observable<ProductListItem[]> {
-    console.log('get prod = ');
-    return this.http.get<ProductListItem[]>('http://localhost:5000/products');
+    let a = this.http.get<ProductListItem[]>('http://localhost:5000/products');
+    console.log('get prod = a');
+    return a
   }
 }
