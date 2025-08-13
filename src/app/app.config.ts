@@ -13,6 +13,8 @@ import { provideEffects } from '@ngrx/effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { isDevMode } from '@angular/core';
 import { provideHttpClient } from '@angular/common/http';
+import { ProductEffects } from './store/Effects/products.effect';
+import { productsReducer } from './store/Reducers/products.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -21,8 +23,10 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(withEventReplay()),
     provideHttpClient(),
 
-    provideStore({}),
-    provideEffects(),
+    provideStore({
+      products : productsReducer
+    }),
+    provideEffects(ProductEffects),
     provideStoreDevtools({
       maxAge: 25, // Retains last 25 states
       logOnly: !isDevMode(), // Restrict extension to log-only mode

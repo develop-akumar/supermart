@@ -1,4 +1,4 @@
-import { createActionGroup, emptyProps, props } from "@ngrx/store";
+import { createAction, createActionGroup, emptyProps, props } from "@ngrx/store";
 import { ProductListItem } from "../../types/products.type";
 
 export const fetchProductsAction = createActionGroup({
@@ -9,3 +9,7 @@ export const fetchProductsAction = createActionGroup({
         'Error' : emptyProps()
     }
 })
+
+// export const initialProduct = createAction(
+//     '[products]'
+// )

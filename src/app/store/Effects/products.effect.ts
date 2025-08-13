@@ -16,9 +16,7 @@ export class ProductEffects {
       ofType(fetchProductsAction.hit),
       exhaustMap(() =>
         this.productsService.getProductsList().pipe(
-          map((productsList) =>
-            fetchProductsAction.success({ payload: productsList })
-          ),
+          map((product) => fetchProductsAction.success({ payload: product })),
           catchError((e) => of(fetchProductsAction.error()))
         )
       )
