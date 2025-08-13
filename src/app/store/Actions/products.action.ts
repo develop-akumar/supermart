@@ -10,6 +10,3 @@ export const fetchProductsAction = createActionGroup({
     }
 })
 
-// export const initialProduct = createAction(
-//     '[products]'
-// )

@@ -7,12 +7,11 @@ import { Observable } from 'rxjs';
 
 export class ProductsService {
   constructor(private http: HttpClient) {
-    console.log('abc = ');
+    console.log('ProductsService started = ');
   }
 
   getProductsList(): Observable<ProductListItem[]> {
-    let a = this.http.get<ProductListItem[]>('http://localhost:5000/products');
-    console.log('get prod = a');
-    return a
+    return this.http.get<ProductListItem[]>('http://localhost:5000/products');
+    
   }
 }

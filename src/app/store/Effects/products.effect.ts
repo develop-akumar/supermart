@@ -9,19 +9,26 @@ export class ProductEffects {
   constructor(
     private actions$: Actions,
     private productsService: ProductsService
-  ) {}
+  ) {
+    // console.log('products effect started = ');
+    // this.productsService.getProductsList().subscribe((res) => {
+    //   console.log('res = ', res);
+    // });
+  }
 
-  loadProducts$ = createEffect(() =>
-    this.actions$.pipe(
-      ofType(fetchProductsAction.hit),
-      exhaustMap(() =>{
-        let a = this.productsService.getProductsList()
-        console.log('a = ', a);
-        return a.pipe(
-          map((product) => fetchProductsAction.success({ payload: product })),
-          catchError((e) => of(fetchProductsAction.error()))
-        )}
-      )
-    )
-  );
+  // loadProducts$ = createEffect(() =>
+  //   this.actions$.pipe(
+  //     ofType(fetchProductsAction.hit),
+  //     exhaustMap(() =>
+  //       this.productsService.getProductsList().pipe(
+  //         map((product: any) =>
+  //           fetchProductsAction.success({ payload: product })
+  //         ),
+  //         catchError((e) => of(fetchProductsAction.error()))
+  //       )
+  //     )
+  //   )
+  // );
+
+  
 }

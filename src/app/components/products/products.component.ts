@@ -9,21 +9,23 @@ import { fetchProductsAction } from '../../store/Actions/products.action';
   selector: 'app-products',
   imports: [],
   templateUrl: './products.component.html',
-  styleUrl: './products.component.css'
+  styleUrl: './products.component.css',
   // providers: [
-    // ProductsService
-    // ],
+  // ProductsService
+  // ],
 })
 export class ProductsComponent {
-  products?: Observable<ProductListItem[]>;
+  products?: ProductListItem[];
 
   constructor(
-    // private productsService: ProductsService, 
-    private store: Store<{products:ProductListItem[]}>) {
-    this.store.dispatch(fetchProductsAction.hit());
+    private productsService: ProductsService,
+    private store: Store<{ products: ProductListItem[] }>
+  ) {
+    // this.store.dispatch(fetchProductsAction.hit());
 
-  //   this.productsService.getProductsList().subscribe((res)=>
-  //   console.log('res = ', res))
-  
+    this.productsService.getProductsList().subscribe((res) => {
+      console.log('res = ', res);
+      this.products = res;
+    });
   }
 }
