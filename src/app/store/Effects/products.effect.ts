@@ -11,17 +11,17 @@ export class ProductEffects {
     private productsService: ProductsService
   ) {}
 
-  loadProducts$ = createEffect(() =>
-    this.actions$.pipe(
-      ofType(fetchProductsAction.hit),
-      exhaustMap(() =>{
-        let a = this.productsService.getProductsList()
-        console.log('a = ', a);
-        return a.pipe(
-          map((product) => fetchProductsAction.success({ payload: product })),
-          catchError((e) => of(fetchProductsAction.error()))
-        )}
-      )
-    )
-  );
+  // loadProducts$ = createEffect(() =>
+  //   this.actions$.pipe(
+  //     ofType(fetchProductsAction.hit),
+  //     exhaustMap(() =>{
+  //       let a = this.productsService.getProductsList()
+  //       console.log('a = ', a);
+  //       return a.pipe(
+  //         map((product) => fetchProductsAction.success({ payload: product })),
+  //         catchError((e) => of(fetchProductsAction.error()))
+  //       )}
+  //     )
+  //   )
+  // );
 }
