@@ -4,3 +4,5 @@ export interface ProductListItem {
   product_image: string;
   price: number;
 }
+
+// kajlksd fas dkflkasdfks adf
