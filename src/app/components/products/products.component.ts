@@ -23,9 +23,12 @@ export class ProductsComponent {
   ) {
     // this.store.dispatch(fetchProductsAction.hit());
 
-    this.productsService.getProductsList().subscribe((res) => {
-      console.log('res = ', res);
-      this.products = res;
-    });
+    // this.productsService.getProductsList().subscribe((res) => {
+    //   console.log('res = ', res);
+    //   this.products = res;
+    // });
+
+
+    this.products = this.productsService.getProductsList()
   }
 }
