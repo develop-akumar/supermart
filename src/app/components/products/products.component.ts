@@ -10,13 +10,13 @@ import { Store } from '@ngrx/store';
   imports: [],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
-  // providers: [ProductsService],
+  providers: [ProductsService],
 })
 export class ProductsComponent {
   products?: ProductListItem[];
 
   constructor(
-    // private productsService: ProductsService,
+    private productsService: ProductsService
     // private store: Store<{ products: ProductListItem[] }>
   ) {
     // this.store.dispatch(fetchProductsAction.hit());
