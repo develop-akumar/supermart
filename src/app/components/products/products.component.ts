@@ -30,7 +30,7 @@ export class ProductsComponent {
     this.products = [
       { id: 1, product_name: 'Jacket', product_image: 'shop-1', price: 100 },
       { id: 2, product_name: 'Purse', product_image: 'shop-2', price: 25 },
-      { id: 3, product_name: 'Dress', product_image: 'shop-3', price: 45 },
+      { id: 3, product_name: 'Dress', product_image: 'shop-3', price: 455 },
       {
         id: 4,
         product_name: 'Denim Jeans',
