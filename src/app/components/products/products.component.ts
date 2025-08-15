@@ -43,7 +43,7 @@ export class ProductsComponent {
         product_image: 'shop-5',
         price: 2500,
       },
-      { id: 6, product_name: 'Back-Pack', product_image: 'shop-6', price: 600 },
+      { id: 6, product_name: 'Back-Pack', product_image: 'shop-6', price: 600 }
     ];
   }
 }
