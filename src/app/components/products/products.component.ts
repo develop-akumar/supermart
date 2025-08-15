@@ -17,7 +17,7 @@ export class ProductsComponent {
 
   constructor(
     // private productsService: ProductsService,
-    private store: Store<{ products: ProductListItem[] }>
+    // private store: Store<{ products: ProductListItem[] }>
   ) {
     // this.store.dispatch(fetchProductsAction.hit());
 
